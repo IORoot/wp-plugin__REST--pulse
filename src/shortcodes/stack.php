@@ -9,7 +9,7 @@ function andyp_pulse_stack_callback($atts){
         array(
             'cpt' => 'youtube',
             'tax' => 'scrapercategory',
-            'term' => 'youtube-curated,instagram-daily-trending',
+            'term' => 'youtube-curated,instagram-curated-accounts',
             'items' => 5,
             'order' => '',
             'orderby' => '',

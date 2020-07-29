@@ -110,7 +110,7 @@ class stack {
             $text = $this->get_meta_text($post->ID);
 
             $output .= '<div class="stack__item stack__item-'.$key.'">';
-                $output .= '<div class="stack__image lazyload" style="background-image: url(\''.$image_url.'\');" ></div>';
+                $output .= '<div class="stack__image" style="background-image: url(\''.$image_url.'\');" ></div>';
                 $output .= '<div class="stack__text">'.$text.'</div>';
             $output .= '</div>';
         }

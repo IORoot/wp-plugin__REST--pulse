@@ -5,6 +5,9 @@
  */
 function andyp_pulse_stack_callback($atts){
     
+    wp_register_style( 'andyp_stacks_css', ANDYP_PULSE_STACK_PATH.'src/sass/style.css' );
+    wp_enqueue_style( 'andyp_stacks_css' );
+
     $a = shortcode_atts( 
         array(
             'cpt' => 'youtube',

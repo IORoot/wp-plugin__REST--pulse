@@ -3,7 +3,7 @@
 /*
  * 
  * @wordpress-plugin
- * Plugin Name:       _ANDYP - Pulse Stacks - Shortcode
+ * Plugin Name:       _ANDYP - Pulse - Menu Stacks - Shortcode
  * Plugin URI:        http://londonparkour.com
  * Description:       <strong>🩳SHORTCODE</strong> | <em>Shortcode [pulse_stack] </em> | Creates a stack of images from parkourpulse.
  * Version:           1.0.0

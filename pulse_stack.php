@@ -3,9 +3,9 @@
 /*
  * 
  * @wordpress-plugin
- * Plugin Name:       _ANDYP - Pulse - Menu Stacks - Shortcode
+ * Plugin Name:       _ANDYP - REST - Pulse latest posts
  * Plugin URI:        http://londonparkour.com
- * Description:       <strong>🩳SHORTCODE</strong> | <em>Shortcode [pulse_stack] </em> | Creates a stack of images from parkourpulse.
+ * Description:       <strong>🩳SHORTCODE</strong> | <em>Shortcode [andyp_pulse_stack] </em> | REST Request to parkourpulse for latest posts.
  * Version:           1.0.0
  * Author:            Andy Pearson
  * Author URI:        https://londonparkour.com

@@ -12,6 +12,7 @@ class initialise {
         //  │                            Add Shortcodes                               │
         //  └─────────────────────────────────────────────────────────────────────────┘
         require __DIR__.'/shortcodes/stack.php';
+        require __DIR__.'/shortcodes/pulse_rest.php';
 
     }
 

@@ -41,27 +41,30 @@ class stack {
     }
 
 
-
-
-
-
     public function render()
     {
         if (!isset($this->posts)){
             return;
         }
 
-        $output = '<div class="animated-stack stack">';
+        shuffle($this->posts);
+
+        $output = '<ul class="parkourpulse flex overflow-hidden h-96" style="width:400%">';
 
         foreach($this->posts as $key => $post )
         {
-            $output .= '<div class="stack__item stack__item-'.$key.'">';
-                $output .= '<div class="stack__image" style="background-image: url(\''.$post->imageURL.'\');" ></div>';
-                $output .= '<div class="stack__text"><i class="stack__icon mdi mdi-youtube-tv"></i>'.$post->channelTitle.'</div>';
-            $output .= '</div>';
+            // 1 = 'one', 12 = 'twelve'
+            $f = new \NumberFormatter("en", \NumberFormatter::SPELLOUT);
+            $id = $f->format($key);
+            $zebra = ($key++%2==1) ? 'odd' : 'even';
+
+            $output .= '<li class="'.$id.' '.$zebra.' w-1/5 h-1/2 lg:w-1/5 lg:h-2/3 p-8" style="transform: scaleX(1) scaleY(1);">';
+                $output .= '<div class="bg-cover bg-center w-full h-full shadow lg:shadow-2xl rounded" style="background-image: url(\''.$post->imageURL.'\');" ></div>';
+                $output .= '<div class="">'.$post->channelTitle.'</div>';
+            $output .= '</li>';
         }
 
-        $output .= '</div>';
+        $output .= '</ul>';
 
         $this->result = $output;
     }

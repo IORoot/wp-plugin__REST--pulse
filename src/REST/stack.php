@@ -35,6 +35,10 @@ class stack {
             'pulse_category' => 4
         ), 'https://pulse.londonparkour.com/wp-json/wp/v2/pulse' ) );
 
+        if (is_wp_error($response)) {
+            return;
+        }
+        
         $this->posts = json_decode( $response['body'] ); // our posts are here
 
         \set_transient( 'pulsestack', json_decode( $this->posts ), DAY_IN_SECONDS );

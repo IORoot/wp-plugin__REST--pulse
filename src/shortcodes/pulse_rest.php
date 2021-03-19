@@ -3,7 +3,7 @@
 /**
  * Create the class and return results.
  */
-function andyp_pulse_rest_callback($atts){
+function andyp_pulse_rest_callback($atts, $content = null){
 
     $pulse = new \andyp\pulsestack\REST\pulse_rest();
 
@@ -21,6 +21,9 @@ function andyp_pulse_rest_callback($atts){
     }
     if (isset($atts['order'])){
         $pulse->set_order($atts['order']);
+    }
+    if (isset($content)){
+        $pulse->set_content($content);
     }
 
     $pulse->run();

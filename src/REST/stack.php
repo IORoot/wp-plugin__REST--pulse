@@ -63,7 +63,9 @@ class stack {
             $zebra = ($key++%2==1) ? 'odd' : 'even';
 
             $output .= '<li class="'.$id.' '.$zebra.' w-1/5 h-1/2 lg:w-1/5 lg:h-2/3 p-8" style="transform: scaleX(1) scaleY(1);">';
-                $output .= '<div class="bg-cover bg-center w-full h-full shadow lg:shadow-2xl rounded" style="background-image: url(\''.$post->imageURL.'\');" ></div>';
+                $output .= '<div class="w-full h-full shadow lg:shadow-2xl rounded mb-2">';
+                    $output .= '<img class="lazyload object-cover" src="'.$post->imageURL.'" alt="'.$post->title->rendered.'">';
+                $output .= '</div>';
                 $output .= '<div class="">'.$post->channelTitle.'</div>';
             $output .= '</li>';
         }

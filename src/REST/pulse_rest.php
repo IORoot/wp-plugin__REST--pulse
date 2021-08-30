@@ -70,7 +70,7 @@ class pulse_rest {
      */
     private function REST_call()
     {
-        $transient = \get_transient( 'pulserest-'.$this->posttype );
+        $transient = \get_transient( 'pulserest-'.$this->posttype ); 
         if( ! empty( $transient ) ) { 
             $this->posts = json_decode($transient);
             return; 

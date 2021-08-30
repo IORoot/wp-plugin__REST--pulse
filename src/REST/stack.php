@@ -11,6 +11,8 @@ class stack {
 
     public $result;
 
+    public $endpoint = "https://parkourpulse.com/wp-json/wp/v2/pulse";
+
 
     public function __construct()
     {
@@ -33,7 +35,7 @@ class stack {
         $response = \wp_remote_get( add_query_arg( array(
             'per_page' => 5,
             'pulse_category' => 4
-        ), 'https://pulse.londonparkour.com/wp-json/wp/v2/pulse' ) );
+        ), $this->endpoint ) );
 
         if (is_wp_error($response)) {
             return;

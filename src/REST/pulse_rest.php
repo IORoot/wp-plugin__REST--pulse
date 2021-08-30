@@ -17,7 +17,7 @@ class pulse_rest {
     public $category;
     public $classes  = '';
     public $content;
-    public $endpoint = "https://parkourpulse.com/wp-json/wp/v2/pulse";
+    public $endpoint = "https://parkourpulse.com/wp-json/wp/v2";
 
 
     public function set_count($count)
@@ -70,8 +70,11 @@ class pulse_rest {
      */
     private function REST_call()
     {
-        $transient = \get_transient( 'pulserest' );
-        if( ! empty( $transient ) ) { return $transient; }
+        $transient = \get_transient( 'pulserest-'.$this->posttype );
+        if( ! empty( $transient ) ) { 
+            $this->posts = json_decode($transient);
+            return; 
+        } 
 
         $category_name = '';
         if (!empty($this->category)){
@@ -82,7 +85,7 @@ class pulse_rest {
             'per_page' => $this->count,
             'orderby' => $this->order,
             $category_name => $this->category,
-        ), $this->endpoint.$this->posttype ) );
+        ), $this->endpoint.'/'.$this->posttype ) );
 
 
         if (is_wp_error($response)) {
@@ -91,7 +94,7 @@ class pulse_rest {
         
         $this->posts = json_decode( $response['body'] ); // our posts are here
 
-        \set_transient( 'pulserest', json_decode( $this->posts ), DAY_IN_SECONDS );
+        \set_transient( 'pulserest-'.$this->posttype, json_encode( $this->posts ), DAY_IN_SECONDS );
     }
 
 

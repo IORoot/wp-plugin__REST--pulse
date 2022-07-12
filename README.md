@@ -41,7 +41,7 @@ To accomplish this, two parts needs to happen:
 1. ParkourPulse needed to extend it's REST API so that the custom post type and associated images could be queried.
 1. LondonParkour needed a shortcode to communicate with that REST API endpoint, pull the images and render them out in the "stack".
 
-This plugin addresses both parts. It communicates with the API and pulls in the data. It then provides shortcodes to render them out.
+This plugin addresses the second part. It communicates with the API and pulls in the data. It then provides shortcodes to render them out.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

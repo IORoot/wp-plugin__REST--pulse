@@ -5,7 +5,7 @@
 
 <img src="https://svg-rewriter.sachinraja.workers.dev/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40mdi%2Fsvg%406.7.96%2Fsvg%2Fapi.svg&fill=%23F97316&width=200px&height=200px" style="width:200px;"/>
 
-<h3 align="center">ParkourPulse.com REST API and shortcodes</h3>
+<h3 align="center">ParkourPulse.com REST API client and stack shortcodes</h3>
 
 <p align="center">
     This is a small shortcode to display a "stack" of images from the latest ParkourPulse images.
